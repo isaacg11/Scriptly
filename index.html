@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SCRIPTLY | JS Chat</title>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/master/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body class="animated fadeIn">
+        <!--NAVBAR-->
+        <nav class="grey darken-3">
+           <div class="nav-wrapper">
+                <ul>
+                    <li><i class="fa fa-commenting-o icon-navbar"></i></li>
+                    <li><a class="grey darken-3 title"><b>SCRIPTLY</b> | JavaScript Chatroom</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="section-Login">
+                        <a id="login-button" class="btn z-depth-0 ">LOGIN</a>&nbsp;&nbsp;
+                    </li>
+                    <li class="section-Login">
+                        <a id="logout-button" class="btn z-depth-0">LEAVE</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--SIDENAV-->
+        <div class="row no-margin-bottom">
+            <div class="col s3 sideNav-parent z-depth-1">
+                <div class="col s12 sideNav grey lighten-5">
+                    <div class="center">
+                        <img src="/images/js.png" class="img-sideNav z-depth-1" />
+                    </div>
+                    <ul class="collapsible z-depth-0 list-sideNav" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header item-sideNav">
+                                <i class="fa fa-bolt"></i> HOW TO USE
+                            </div>
+                            <div class="collapsible-body">
+                                <p>1) <em>Login</em> to chat.<br>
+                                   2) <em>Post</em> a JS question.<br>
+                                   3) <em>Get Help</em> in real-time!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header item-sideNav">
+                                <i class="fa fa-info-circle"></i> ABOUT
+                            </div>
+                            <div class="collapsible-body">
+                                <p>SCRIPTLY is a real-time JavaScript support app. Unlike traditional Q & A apps that can take hours/days to get solutions, SCRIPTLY gets developers help fast in a chatroom enviornment.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header item-sideNav">
+                                <i class="fa fa-envelope-o"></i> CONTACT
+                            </div>
+                            <div class="collapsible-body">
+                                <p class="desc-Contact">Isaac Grey, <em>Administrator</em></p>
+                                <a class="link-Contact" href="mailto:isaac@softwarebyisaac.com">Contact Me
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        <!--FEED-->
+            <div class="col s9 feed-parent">
+        <!--INPUT-->
+                <div class="row no-margin-bottom z-depth-1 input-parent">
+                    <div class="col s12 section-message">
+                        <form id="new-message" class="grey lighten-5">
+                            <div class="input-field sides-message">
+                                <input 
+                                id="message-input" 
+                                placeholder="You Must Login To Chat" 
+                                disabled="true">
+                                </input>
+                                <button id="postMsgBtn" class="btn z-depth-0"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        <!--OUTPUT-->
+                <div class="row">
+                    <div class="col s2 blend">.</div>
+                        <div>
+                            <div id="output" class="col s8 virtual-scroll">
+                            </div>
+                        </div>
+                    <div class="col s2 blend">.</div>
+                </div>
+        <!--CLOSING DIV-->
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer id="footer" class="page-footer center no-margin-top">
+            © SCRIPTLY 2016
+        </footer>
+
+        <!--SCRIPTS-->
+            <script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/1.2.9/stamplay.min.js"></script>
+            <script src="https://js.pusher.com/3.0/pusher.min.js" type="text/javascript"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+            <script src="./js/app.js"></script>
+        </body>
+</html>
